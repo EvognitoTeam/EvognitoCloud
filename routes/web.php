@@ -16,7 +16,9 @@ use App\Http\Controllers\AutomationsController;
 Route::middleware('set.locale')->group(function () {
     Route::get('/', fn() => view('landing'))->name('landing');
     Route::get('/login', fn() => view('auth.login'))->name('login');
+    Route::post('/login', [UsersController::class, 'login'])->name('login');
     Route::get('/register', fn() => view('auth.register'))->name('register');
+    Route::post('/register', [UsersController::class, 'register'])->name('register');
     Route::get('/about_us', fn() => view('about'))->name('about');
 });
 
