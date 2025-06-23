@@ -21,13 +21,13 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::post('/login', [UsersController::class, 'login'])->name('login');
+Route::post('/login', [UsersController::class, 'login'])->name('login.submit');
 
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-Route::post('/register', [UsersController::class, 'register'])->name('register');
+Route::post('/register', [UsersController::class, 'register'])->name('register.submit');
 
 Route::get('/about_us', function () {
     return view('about');
