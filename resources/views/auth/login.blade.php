@@ -25,7 +25,7 @@
         @endif
 
 
-        <form action="{{ route('login.submit') }}" method="POST">
+        <form action="{{ route('login') }}" method="POST">
             @csrf
             @if ($errors->any())
                 <div class="mb-4 text-red-600">
