@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        <form action="{{ route('register') }}" method="POST">
+        <form action="{{ route('register.submit') }}" method="POST">
             @csrf
             @if ($errors->any())
                 <div class="mb-4 text-red-600">
