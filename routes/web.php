@@ -13,14 +13,25 @@ use App\Http\Controllers\AutomationsController;
 //     return view('app');
 // });
 
-Route::middleware('set.locale')->group(function () {
-    Route::get('/', fn() => view('landing'))->name('landing');
-    Route::get('/login', fn() => view('auth.login'))->name('login');
-    Route::post('/login', [UsersController::class, 'login'])->name('login');
-    Route::get('/register', fn() => view('auth.register'))->name('register');
-    Route::post('/register', [UsersController::class, 'register'])->name('register');
-    Route::get('/about_us', fn() => view('about'))->name('about');
-});
+Route::get('/', function () {
+    return view('landing');
+})->name('landing');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::post('/login', [UsersController::class, 'login'])->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
+Route::post('/register', [UsersController::class, 'register'])->name('register');
+
+Route::get('/about_us', function () {
+    return view('about');
+})->name('about');
 
 // Dashboard routes (simulated authentication for static content)
 Route::prefix('dashboard')->middleware(['set.locale', 'auth.redirect'])->group(function () {
