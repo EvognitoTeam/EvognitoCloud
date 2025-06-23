@@ -25,6 +25,15 @@
 
         <form action="{{ route('register.submit') }}" method="POST">
             @csrf
+            @if ($errors->any())
+                <div class="mb-4 text-red-600">
+                    <ul class="list-disc list-inside text-sm">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
                 <input type="text" id="name" name="name" value="{{ old('name') }}"

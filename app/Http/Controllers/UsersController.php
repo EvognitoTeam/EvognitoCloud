@@ -13,7 +13,14 @@ class UsersController extends Controller
     {
         return view('dashboard.users');
     }
-
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+    public function showRegisterForm()
+    {
+        return view('auth.register');
+    }
     public function login(Request $request)
     {
         $credentials = $request->validate([
