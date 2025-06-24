@@ -6,11 +6,11 @@
 @section('content')
     <div class="bg-white rounded-lg shadow-md p-6 dark:bg-gray-800"> {{-- dark mode background --}}
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Your Connected Devices</h3>
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">@lang('messages.your_connected_devices')</h3>
             {{-- dark mode text --}}
-            <a href="{{ route('dashboard.devices.create') }}"
+            <a href="{{ localized_route('dashboard.devices.create') }}"
                 class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md dark:bg-blue-700 dark:hover:bg-blue-800 dark:text-white">
-                Add New Device
+                @lang('messages.add_new_device')
             </a>
         </div>
         <div class="overflow-x-auto">
@@ -19,16 +19,16 @@
                     <tr>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-300">
-                            Device Name</th> {{-- dark mode text --}}
+                            @lang('messages.device_name')</th> {{-- dark mode text --}}
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-300">
                             Status</th> {{-- dark mode text --}}
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-300">
-                            Last Activity</th> {{-- dark mode text --}}
+                            @lang('messages.last_activity')</th> {{-- dark mode text --}}
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-300">
-                            Actions</th> {{-- dark mode text --}}
+                            @lang('messages.actions')</th> {{-- dark mode text --}}
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
@@ -45,10 +45,10 @@
                         {{-- dark mode text --}}
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <a href="#"
-                                class="text-blue-600 hover:text-blue-900 mr-4 dark:text-blue-400 dark:hover:text-blue-500">View
-                                Data</a> {{-- dark mode link --}}
+                                class="text-blue-600 hover:text-blue-900 mr-4 dark:text-blue-400 dark:hover:text-blue-500">@lang('messages.view_data')</a>
+                            {{-- dark mode link --}}
                             <a href="#"
-                                class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-500">Control</a>
+                                class="text-indigo-600 hover:text-indigo-900 dark:text-indigo-400 dark:hover:text-indigo-500">@lang('messages.control')</a>
                             {{-- dark mode link --}}
                         </td>
                     </tr>

@@ -28,7 +28,9 @@
 </header>
 
 <script>
-    // JavaScript untuk menampilkan jam saat ini (tetap di sini agar scope-nya lokal ke header)
+    window.APP_TIMEZONE = window.APP_TIMEZONE || @json(config('app.timezone'));
+    window.APP_LOCALE = window.APP_LOCALE || @json(app()->getLocale());
+
     function updateTime() {
         const now = new Date();
         const options = {
@@ -39,15 +41,13 @@
             minute: '2-digit',
             second: '2-digit',
             hour12: false,
+            timeZone: APP_TIMEZONE,
             timeZoneName: 'short'
         };
-        const formattedTime = new Intl.DateTimeFormat('en-GB', {
-            ...options,
-            timeZone: 'Asia/Jakarta'
-        }).format(now);
-        document.getElementById('current-time').innerText = formattedTime + ' WIB';
+        const formattedTime = new Intl.DateTimeFormat(APP_LOCALE, options).format(now);
+        document.getElementById('current-time').innerText = formattedTime;
     }
 
     setInterval(updateTime, 1000);
-    updateTime(); // Panggil saat halaman dimuat
+    updateTime();
 </script>

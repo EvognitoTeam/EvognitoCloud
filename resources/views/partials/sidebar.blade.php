@@ -22,7 +22,7 @@
                     d="M9.75 17L9.75 17l.001.001.001-.001.001.001-.001-.001H12L9.75 17zM12 12V3.001L21 12H12zM3 12H12">
                 </path>
             </svg>
-            My Devices
+            @lang('messages.menu_devices')
         </a>
         <a href="{{ localized_route('dashboard.templates') }}"
             class="flex items-center py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-white {{ Request::routeIs('dashboard.templates') ? 'bg-gray-700 text-white dark:bg-gray-700 dark:text-white' : 'dark:text-gray-300' }}">
@@ -32,7 +32,7 @@
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
                 </path>
             </svg>
-            Templates
+            @lang('messages.menu_templates')
         </a>
         <a href="{{ localized_route('dashboard.automations') }}"
             class="flex items-center py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-white {{ Request::routeIs('dashboard.automations') ? 'bg-gray-700 text-white dark:bg-gray-700 dark:text-white' : 'dark:text-gray-300' }}">
@@ -42,7 +42,7 @@
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
                 </path>
             </svg>
-            Automations
+            @lang('messages.menu_automations')
         </a>
         <a href="{{ localized_route('dashboard.data_history') }}"
             class="flex items-center py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-white {{ Request::routeIs('dashboard.data_history') ? 'bg-gray-700 text-white dark:bg-gray-700 dark:text-white' : 'dark:text-gray-300' }}">
@@ -52,7 +52,7 @@
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
                 </path>
             </svg>
-            Data History
+            @lang('messages.menu_history')
         </a>
         <a href="{{ localized_route('dashboard.users') }}"
             class="flex items-center py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-white {{ Request::routeIs('dashboard.users') ? 'bg-gray-700 text-white dark:bg-gray-700 dark:text-white' : 'dark:text-gray-300' }}">
@@ -62,7 +62,7 @@
                     d="M17 20h2a2 2 0 002-2V7a2 2 0 00-2-2h-2V3m-5 13L9 20h6l-2-4H9zm2-10V3M7 7h10M7 11h10M7 15h10M4 4h.01M4 8h.01M4 12h.01">
                 </path>
             </svg>
-            Users
+            @lang('messages.menu_users')
         </a>
         <a href="{{ localized_route('dashboard.settings') }}"
             class="flex items-center py-2 px-6 text-gray-300 hover:bg-gray-700 hover:text-white {{ Request::routeIs('dashboard.settings') ? 'bg-gray-700 text-white dark:bg-gray-700 dark:text-white' : 'dark:text-gray-300' }}">
@@ -74,7 +74,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
-            Settings
+            @lang('messages.menu_settings')
         </a>
     </nav>
     <a href="{{ localized_route('logout') }}"
@@ -84,6 +84,6 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
         </svg>
-        Logout
+        @lang('messages.menu_logout')
     </a>
 </aside>

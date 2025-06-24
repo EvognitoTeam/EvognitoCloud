@@ -13,19 +13,21 @@ use App\Http\Controllers\AutomationsController;
 //     return view('app');
 // });
 
+
 Route::get('/', function () {
-    return view('landing');
+    return view('v2/landing');
 })->name('landing');
-
-Route::get('/login', [UsersController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [UsersController::class, 'login'])->name('login.submit');
-
-Route::get('/register', [UsersController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [UsersController::class, 'register'])->name('register.submit');
-
 Route::get('/about_us', function () {
     return view('about');
 })->name('about');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [UsersController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [UsersController::class, 'login'])->name('login.submit');
+
+    Route::get('/register', [UsersController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [UsersController::class, 'register'])->name('register.submit');
+});
 
 // Dashboard routes (simulated authentication for static content)
 Route::prefix('dashboard')->middleware(['set.locale', 'auth.redirect'])->group(function () {

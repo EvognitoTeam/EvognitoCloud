@@ -16,7 +16,7 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="text-gray-500 text-sm dark:text-gray-400">Total Devices</p>
+                    <p class="text-gray-500 text-sm dark:text-gray-400">@lang('messages.total_devices')</p>
                     <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">12</h2>
                 </div>
             </div>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="mt-8 bg-white rounded-lg shadow-md p-6 dark:bg-gray-800">
-        <h3 class="text-xl font-semibold text-gray-800 mb-4 dark:text-gray-100">Recent Device Activity</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-4 dark:text-gray-100">@lang('messages.recent_activity_devices')</h3>
         <ul class="divide-y divide-gray-200 dark:divide-gray-700">
             <li class="py-3 flex justify-between items-center">
                 <div class="flex items-center">
